@@ -43,8 +43,8 @@ const deleteOne = async (req, res) => {
       uni.findOne({ IDUni })
     ])
 
-     --infoUni.quantity,
-     infoUni.star -= getOneRV.star,
+     --infoUni.quantity
+     infoUni.star -= getOneRV.star
     await infoUni.save()
     
     const delUni = await infoRV.deleteOne({ _id })
